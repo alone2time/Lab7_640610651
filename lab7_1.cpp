@@ -3,9 +3,10 @@
 
 using namespace std;
 
-string func1(string x){
+string func1(string x)
+{
 	int i = 0, L = x.size();
-	string y = "";
+	string y;
 	while(i < L){
 		y += x[L-i-1];
 		i++;
@@ -15,7 +16,7 @@ string func1(string x){
 
 string func2(string x){
 	int i = 0, L = x.size();
-	string y = "";
+	string y ;
 	while(i < L){
 		y += toupper(x[i]);
 		i++;
@@ -25,7 +26,7 @@ string func2(string x){
 
 string func3(string x){
 	int i = 0, L = x.size();
-	string y = "";
+	string y ;
 	while(i < L){
 		y += tolower(x[i]);
 		i++;
@@ -34,8 +35,18 @@ string func3(string x){
 }
 
 int main(){
-    cout >> "Input text: "
-    cout >> "Reversed text: "
-    cout >> "Palindrome: "
+	string x , z;
+	
+    cout << "Input text: ";
+	cin >> x ;
+    cout << "Reversed text: "<< func1(x) << endl;
+	if(x == func1(x) or func2(x) == func2(func1(x)) or func3(x) == func3(func1(x)))
+		{
+			z = "YES";
+		}else
+			{
+				z = "NO" ;
+			}
+    cout << "Palindrome: "<< z ;
     return 0;
 }
